@@ -1,0 +1,459 @@
+@import "function";
+
+// RESETS
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+// /* ####### */
+body {
+  background: #fffdfa;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*##### for-phone-only ##########*/
+@media (max-width: 599px) {
+  body {
+    background: #0E1323;
+    padding-top: toRem(81);
+  }
+
+  main {
+    width: 327px;
+    margin: 0 auto;
+  }
+  // =============
+  
+
+  aside {
+    background-color: #1c204b;
+    border-radius: 15px;
+    margin-bottom: 24px;
+
+    .user {
+      background: #5747ea;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      padding: toRem(32) toRem(29) toRem(34) toRem(29);
+    }
+
+    .jeremy-avatar {
+      width: toRem(64);
+      height: toRem(64);
+      margin-right: toRem(17);
+      border-radius: 50%;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      border: 3px solid #ffffff;
+    }
+
+    .report {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      color: #bbc0ff;
+      margin-bottom: 3px;
+    }
+
+    h1 {
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 26px;
+      color: #ffffff;
+    }
+
+    .stats {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding-top: toRem(32);
+      padding-bottom: toRem(32);
+
+      button {
+        background-color: transparent;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #7078c9;
+      }
+
+      .weekly {
+        color: white;
+      }
+    }
+  }
+
+  
+
+  .state-square {
+    height: 160px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    & + & {
+      margin-top: 24px;
+    }
+
+    .padding {
+      padding: toRem(28) toRem(24);
+      width: 100%;
+      height: 122px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #33397a;
+      }
+    }
+
+    .box {
+      // width: toRem(255);
+      border-radius: 15px;
+      background: #1c204b;
+
+      .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+
+        p {
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 21px;
+          color: #ffffff;
+        }
+
+        .three-dots {
+          width: toRem(16);
+        }
+      }
+
+      .hours h2 {
+        font-weight: 300;
+        font-size: 32px;
+        color: #ffffff;
+      }
+
+      .last-week {
+        font-weight: 400;
+        font-size: 15px;
+        color: #bbc0ff;
+      }
+    }
+  }
+
+  .mobile-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .work {
+    background: #ff8b64;
+    background-image: url(./images/icon-work.svg);
+  }
+
+  .play {
+    background: #55c2e6;
+    background-image: url(./images/icon-play.svg);
+  }
+
+  .study {
+    background: #ff5e7d;
+    background-image: url(./images/icon-study.svg);
+  }
+
+  .exercise {
+    background: #4bcf82;
+    background-image: url(./images/icon-exercise.svg);
+  }
+
+  .social {
+    background: #7335d2;
+    background-image: url(./images/icon-social.svg);
+  }
+
+  .self-care {
+    background: #f1c75b;
+    background-image: url(./images/icon-self-care.svg);
+  }
+
+  .work,
+  .play,
+  .study,
+  .exercise,
+  .social,
+  .self-care {
+    background-repeat: no-repeat;
+    background-position: 220px -6px;
+  }
+
+  footer {
+    height: toRem(81);
+  }
+}
+
+/*############ for-tablet-portrait-up ##############*/
+@media (min-width: 600px) {
+  body {
+    background: #0e1323;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    width: 80%;
+    display: grid;
+    grid-template-areas:
+      "aside work play study"
+      "aside exercise social selfcare";
+    gap: 30px;
+  }
+
+  aside {
+    grid-area: aside;
+  }
+
+  .work {
+    grid-area: work;
+  }
+
+  .play {
+    grid-area: play;
+  }
+
+  .study {
+    grid-area: study;
+  }
+
+  .exercise {
+    grid-area: exercise;
+  }
+
+  .social {
+    grid-area: social;
+  }
+
+  .self-care {
+    grid-area: selfcare;
+  }
+  // ======= end grid ======
+  aside {
+    background-color: #1c204b;
+    border-radius: 15px;
+
+    .user {
+      background: #5747ea;
+      border-radius: 15px;
+      margin-bottom: 26px;
+      padding: toRem(37) toRem(84) toRem(80) toRem(32);
+    }
+
+    .jeremy-avatar {
+      width: toRem(78);
+      height: toRem(78);
+      margin-bottom: toRem(43);
+      border-radius: 50%;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      border: 3px solid #ffffff;
+    }
+
+    .report {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      color: #bbc0ff;
+      margin-bottom: 3px;
+    }
+
+    h1 {
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 47px;
+      color: #ffffff;
+    }
+
+    .stats {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: toRem(32);
+      margin-bottom: toRem(32);
+
+      button {
+        background-color: transparent;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #7078c9;
+      }
+
+      .weekly {
+        color: white;
+      }
+
+      button + button {
+        margin-top: 21px;
+      }
+    }
+  }
+
+  .state-square {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .padding {
+      padding: toRem(29) toRem(35) toRem(32) toRem(30);
+      box-shadow: 5px 27px 5px 5px #0e1323;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #33397a;
+      }
+    }
+
+    .box {
+      width: toRem(255);
+      border-radius: 15px;
+      background: #1c204b;
+
+      .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+
+        p {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
+          color: #ffffff;
+        }
+
+        .three-dots {
+          width: toRem(16);
+        }
+      }
+
+      .hours h2 {
+        font-weight: 300;
+        font-size: 56px;
+        line-height: 66px;
+        color: #ffffff;
+      }
+
+      .last-week {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        color: #bbc0ff;
+      }
+    }
+  }
+
+  .work {
+    background: #ff8b64;
+    background-image: url(./images/icon-work.svg);
+  }
+
+  .play {
+    background: #55c2e6;
+    background-image: url(./images/icon-play.svg);
+  }
+
+  .study {
+    background: #ff5e7d;
+    background-image: url(./images/icon-study.svg);
+  }
+
+  .exercise {
+    background: #4bcf82;
+    background-image: url(./images/icon-exercise.svg);
+  }
+
+  .social {
+    background: #7335d2;
+    background-image: url(./images/icon-social.svg);
+  }
+
+  .self-care {
+    background: #f1c75b;
+    background-image: url(./images/icon-self-care.svg);
+  }
+
+  .work,
+  .play,
+  .study,
+  .exercise,
+  .social,
+  .self-care {
+    background-repeat: no-repeat;
+    background-position: 160px -6px;
+  }
+}

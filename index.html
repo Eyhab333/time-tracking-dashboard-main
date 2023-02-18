@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <style>
+      body {
+        font-family: "Rubik", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <aside class="box">
+        <div class="user">
+          <div class="jeremy-avatar">
+            <img src="./images/image-jeremy.png" alt="jeremy" />
+          </div>
+          <div>
+            <div class="report">Report for</div>
+            <h1>
+              Jeremy
+              Robson
+            </h1>
+          </div>
+        </div>
+        <div class="stats">
+          <button class="daily">Daily</button>
+          <button class="weekly">Weekly</button>
+          <button class="monthly">Monthly</button>
+        </div>
+      </aside>
+
+      <div class="work state-square">
+        <div class="box padding">
+          <div class="flex">
+            <p>Work</p>
+            <div class="three-dots">
+              <img src="./images/icon-ellipsis.svg" alt="ellipsis" />
+            </div>
+          </div>
+          <div class="mobile-flex">
+            <div class="hours"><h2>32hrs</h2></div>
+            <p class="last-week">Last Week - 36hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="play state-square">
+        <div class="box padding">
+          <div class="flex">
+            <p>Play</p>
+            <div class="three-dots">
+              <img src="./images/icon-ellipsis.svg" alt="ellipsis" />
+            </div>
+          </div>
+          <div class="mobile-flex">
+            <div class="hours"><h2>10hrs</h2></div>
+            <p class="last-week">Last Week - 8hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="study state-square">
+        <div class="box padding">
+          <div class="flex">
+            <p>Study</p>
+            <div class="three-dots">
+              <img src="./images/icon-ellipsis.svg" alt="ellipsis" />
+            </div>
+          </div>
+          <div class="mobile-flex">
+            <div class="hours"><h2>4hrs</h2></div>
+            <p class="last-week">Last Week - 7hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="exercise state-square">
+        <div class="box padding">
+          <div class="flex">
+            <p>Exercise</p>
+            <div class="three-dots">
+              <img src="./images/icon-ellipsis.svg" alt="ellipsis" />
+            </div>
+          </div>
+          <div class="mobile-flex">
+            <div class="hours"><h2>4hrs</h2></div>
+            <p class="last-week">Last Week - 5hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="social state-square">
+        <div class="box padding">
+          <div class="flex">
+            <p>Social</p>
+            <div class="three-dots">
+              <img src="./images/icon-ellipsis.svg" alt="ellipsis" />
+            </div>
+          </div>
+          <div class="mobile-flex">
+            <div class="hours"><h2>5hrs</h2></div>
+            <p class="last-week">Last Week - 10hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="self-care state-square">
+        <div class="box padding">
+          <div class="flex">
+            <p>Self Care</p>
+            <div class="three-dots">
+              <img src="./images/icon-ellipsis.svg" alt="ellipsis" />
+            </div>
+          </div>
+          <div class="mobile-flex">
+            <div class="hours"><h2>2hrs</h2></div>
+            <p class="last-week">Last Week - 2hrs</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="main.js"></script>
+  </body>
+</html>

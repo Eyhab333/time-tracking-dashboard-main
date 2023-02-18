@@ -1,0 +1,386 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+body {
+  background: #fffdfa;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*##### for-phone-only ##########*/
+@media (max-width: 599px) {
+  body {
+    background: #0E1323;
+    padding-top: 5.0625rem;
+  }
+  main {
+    width: 327px;
+    margin: 0 auto;
+  }
+  aside {
+    background-color: #1c204b;
+    border-radius: 15px;
+    margin-bottom: 24px;
+  }
+  aside .user {
+    background: #5747ea;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 2rem 1.8125rem 2.125rem 1.8125rem;
+  }
+  aside .jeremy-avatar {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.0625rem;
+    border-radius: 50%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 3px solid #ffffff;
+  }
+  aside .report {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #bbc0ff;
+    margin-bottom: 3px;
+  }
+  aside h1 {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 26px;
+    color: #ffffff;
+  }
+  aside .stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  aside .stats button {
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #7078c9;
+  }
+  aside .stats .weekly {
+    color: white;
+  }
+  .state-square {
+    height: 160px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .state-square + .state-square {
+    margin-top: 24px;
+  }
+  .state-square .padding {
+    padding: 1.75rem 1.5rem;
+    width: 100%;
+    height: 122px;
+  }
+  .state-square .padding:hover {
+    cursor: pointer;
+    background-color: #33397a;
+  }
+  .state-square .box {
+    border-radius: 15px;
+    background: #1c204b;
+  }
+  .state-square .box .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .state-square .box .flex p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    color: #ffffff;
+  }
+  .state-square .box .flex .three-dots {
+    width: 1rem;
+  }
+  .state-square .box .hours h2 {
+    font-weight: 300;
+    font-size: 32px;
+    color: #ffffff;
+  }
+  .state-square .box .last-week {
+    font-weight: 400;
+    font-size: 15px;
+    color: #bbc0ff;
+  }
+  .mobile-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .work {
+    background: #ff8b64;
+    background-image: url(./images/icon-work.svg);
+  }
+  .play {
+    background: #55c2e6;
+    background-image: url(./images/icon-play.svg);
+  }
+  .study {
+    background: #ff5e7d;
+    background-image: url(./images/icon-study.svg);
+  }
+  .exercise {
+    background: #4bcf82;
+    background-image: url(./images/icon-exercise.svg);
+  }
+  .social {
+    background: #7335d2;
+    background-image: url(./images/icon-social.svg);
+  }
+  .self-care {
+    background: #f1c75b;
+    background-image: url(./images/icon-self-care.svg);
+  }
+  .work,
+  .play,
+  .study,
+  .exercise,
+  .social,
+  .self-care {
+    background-repeat: no-repeat;
+    background-position: 220px -6px;
+  }
+  footer {
+    height: 5.0625rem;
+  }
+}
+/*############ for-tablet-portrait-up ##############*/
+@media (min-width: 600px) {
+  body {
+    background: #0e1323;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main {
+    width: 80%;
+    display: grid;
+    grid-template-areas: "aside work play study" "aside exercise social selfcare";
+    gap: 30px;
+  }
+  aside {
+    grid-area: aside;
+  }
+  .work {
+    grid-area: work;
+  }
+  .play {
+    grid-area: play;
+  }
+  .study {
+    grid-area: study;
+  }
+  .exercise {
+    grid-area: exercise;
+  }
+  .social {
+    grid-area: social;
+  }
+  .self-care {
+    grid-area: selfcare;
+  }
+  aside {
+    background-color: #1c204b;
+    border-radius: 15px;
+  }
+  aside .user {
+    background: #5747ea;
+    border-radius: 15px;
+    margin-bottom: 26px;
+    padding: 2.3125rem 5.25rem 5rem 2rem;
+  }
+  aside .jeremy-avatar {
+    width: 4.875rem;
+    height: 4.875rem;
+    margin-bottom: 2.6875rem;
+    border-radius: 50%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 3px solid #ffffff;
+  }
+  aside .report {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #bbc0ff;
+    margin-bottom: 3px;
+  }
+  aside h1 {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 47px;
+    color: #ffffff;
+  }
+  aside .stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+  aside .stats button {
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #7078c9;
+  }
+  aside .stats .weekly {
+    color: white;
+  }
+  aside .stats button + button {
+    margin-top: 21px;
+  }
+  .state-square {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .state-square .padding {
+    padding: 1.8125rem 2.1875rem 2rem 1.875rem;
+    box-shadow: 5px 27px 5px 5px #0e1323;
+  }
+  .state-square .padding:hover {
+    cursor: pointer;
+    background-color: #33397a;
+  }
+  .state-square .box {
+    width: 15.9375rem;
+    border-radius: 15px;
+    background: #1c204b;
+  }
+  .state-square .box .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .state-square .box .flex p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+  }
+  .state-square .box .flex .three-dots {
+    width: 1rem;
+  }
+  .state-square .box .hours h2 {
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 66px;
+    color: #ffffff;
+  }
+  .state-square .box .last-week {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #bbc0ff;
+  }
+  .work {
+    background: #ff8b64;
+    background-image: url(./images/icon-work.svg);
+  }
+  .play {
+    background: #55c2e6;
+    background-image: url(./images/icon-play.svg);
+  }
+  .study {
+    background: #ff5e7d;
+    background-image: url(./images/icon-study.svg);
+  }
+  .exercise {
+    background: #4bcf82;
+    background-image: url(./images/icon-exercise.svg);
+  }
+  .social {
+    background: #7335d2;
+    background-image: url(./images/icon-social.svg);
+  }
+  .self-care {
+    background: #f1c75b;
+    background-image: url(./images/icon-self-care.svg);
+  }
+  .work,
+  .play,
+  .study,
+  .exercise,
+  .social,
+  .self-care {
+    background-repeat: no-repeat;
+    background-position: 160px -6px;
+  }
+}/*# sourceMappingURL=style.css.map */
